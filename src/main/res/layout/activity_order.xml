@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/water">
+
+    <EditText
+        android:id="@+id/editCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:hint="@string/Enter_Your_Name"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:textColor="#2f3542"
+        android:textColorHint="#2f3542" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/camera"
+        android:id="@+id/imageView"
+        android:layout_marginEnd="24dp"
+        android:layout_below="@+id/editCustomer"
+        android:layout_alignStart="@+id/editCustomer"
+        android:layout_marginTop="8dp"
+        android:onClick="dispatchTakePictureIntent"
+        android:contentDescription="@null"
+        />
+
+    <TextView
+        android:id="@+id/imageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Take_photo_for_TShirt"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginStart="24dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:onClick="dispatchTakePictureIntent"
+        />
+
+    <EditText
+        android:id="@+id/editOptional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="54dp"
+        android:hint="@string/order_message_instructions"
+        android:inputType="textMultiLine"
+        android:textColor="#2f3542"
+        android:textColorHint="#2f3542" />
+
+
+    <TextView
+        android:id="@+id/editCollect"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/editCustomer"
+        android:layout_marginBottom="89dp"
+        android:text="@string/ready_time"
+        android:textColor="#2f3542"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/imageView"
+        android:layout_alignTop="@id/editCollect"
+        android:layout_gravity="center"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_toLeftOf="@id/editCollect"
+        android:gravity="start"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@color/button_backgound"
+        android:onClick="sendEmail"
+        android:text="@string/Send_Order"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>
